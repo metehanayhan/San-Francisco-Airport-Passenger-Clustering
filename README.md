@@ -36,6 +36,7 @@ The project requires the following Python libraries:
 You can install these dependencies using:
 ```bash
 pip install -r requirements.txt
+```
 
 ## Results
 The optimal number of clusters was determined using the Elbow Method. The silhouette score achieved was 0.828, indicating well-defined clusters. The results are visualized to show the relationship between passenger count and geographical region across different clusters.
