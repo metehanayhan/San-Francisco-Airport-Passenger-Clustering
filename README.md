@@ -1,3 +1,5 @@
+[EN]
+
 # San Francisco Airport Passenger Clustering
 
 ## About the Project
@@ -33,10 +35,54 @@ The project requires the following Python libraries:
 - yellowbrick
 - scipy
 
-You can install these dependencies using:
-```bash
-pip install -r requirements.txt
-```
-
 ## Results
 The optimal number of clusters was determined using the Elbow Method. The silhouette score achieved was 0.828, indicating well-defined clusters. The results are visualized to show the relationship between passenger count and geographical region across different clusters.
+
+[TR]
+
+# San Francisco Airport Passenger Clustering
+
+## Proje Hakkında
+Bu proje, San Francisco Uluslararası Havalimanı'ndan alınan yolcu hareket verilerini kullanarak K-Means clustering yöntemiyle anlamlı yolcu segmentleri oluşturmayı amaçlamaktadır. Havalimanındaki farklı yolcu davranışlarını anlamak ve çeşitli yolcu grupları hakkında içgörüler elde etmek hedeflenmiştir. Optimum küme sayısını belirlemek için Elbow Method kullanılmış ve segmentasyon sonuçları görselleştirilmiştir.
+
+---
+
+## Veri Seti Özeti
+Projede kullanılan veri seti, yolcu hareketleriyle ilgili şu özellikleri içermektedir:
+- **Activity Period**: Hareketin gerçekleştiği yıl ve ay.
+- **Operating Airline**: Uçağı işleten havayolu şirketi.
+- **Operating Airline IATA Code**: İşleten havayolunun IATA kodu.
+- **Published Airline**: Uçuşu yayımlayan havayolu şirketi.
+- **Published Airline IATA Code**: Yayımlayan havayolunun IATA kodu.
+- **GEO Summary**: Uçuşun coğrafi özeti.
+- **GEO Region**: Uçuşun coğrafi bölgesi veya ülkesi.
+- **Activity Type Code**: Yolcu hareket türü (örn. Biniş, İniş).
+- **Price Category Code**: Biletin fiyat kategorisi.
+- **Terminal**: Yolcuların hizmet aldığı terminal.
+- **Boarding Area**: Yolcuların uçağa bindiği alan veya kapı.
+- **Passenger Count**: Belirtilen hareket türündeki yolcu sayısı.
+
+---
+
+## Adımlar
+1. **Exploratory Data Analysis (EDA)**: Veri setinin ilk analizi, eksik değerlerin kontrolü ve özet istatistiklerin çıkarılması.
+2. **Data Preprocessing**: Eksik değerlerin doldurulması, kategorik değişkenlerin kodlanması ve özelliklerin ölçeklendirilmesi.
+3. **K-Means Clustering**: Veriler üzerinde K-Means yöntemiyle kümeleme yapılması.
+4. **Elbow Method**: Optimum küme sayısının belirlenmesi.
+5. **Clustering Results**: Yolcu sayısı ve coğrafi bölgeye dayalı kümelerin analiz edilmesi ve görselleştirilmesi.
+
+---
+
+## Gereksinimler
+Bu projeyi çalıştırmak için aşağıdaki Python kütüphaneleri gereklidir:
+- pandas
+- scikit-learn
+- matplotlib
+- yellowbrick
+- scipy
+
+
+## Sonuçlar
+- **Elbow Method** ile optimum küme sayısı belirlendi.
+- **Silhouette Skoru**: 0.828, kümelerin iyi tanımlandığını göstermektedir.
+- **Kümeleme Sonuçları**: Yolcu sayısı ve coğrafi bölge arasındaki ilişki, farklı kümelerle görselleştirilerek analiz edilmiştir. Bu analizler, havalimanındaki farklı yolcu gruplarının davranışlarını anlamak için güçlü görüler sunmaktadır.
